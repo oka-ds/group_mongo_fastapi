@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "olist-api"
+version = "0.1.0"
+description = "Store the Brazilian E-Commerce Public Dataset by Olist in MongoDB and expose it through a FastAPI REST API"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    # API: pulls uvicorn, httpx (TestClient), fastapi CLI, python-multipart...
+    "fastapi[standard]>=0.119.1",   
+    "pydantic>=2.12",               
+    "pydantic-settings>=2.11",      # typed config loaded from .env (MONGO_URI, DB name...)
+    "pymongo>=4.15.2",              
+    "pandas>=3.0.3",                
+    "python-dotenv>=1.2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.2",
+    "ruff>=0.16",
+]
+
+[project.scripts]
+olist-import = "olist.ingestion:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
