@@ -1,0 +1,2 @@
+[console_scripts]
+my-project = projet_groupe_mongodb.src.main:main

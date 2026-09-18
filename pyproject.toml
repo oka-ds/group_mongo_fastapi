@@ -1,0 +1,30 @@
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mongodb_group"
+version = "0.1.0"
+description = """Store data 'Brazilian E-Commerce Public Dataset by Olist'\
+in mongoDb and allow access with FastAPI"""
+readme = "README.md"
+requires-python="==3.11.2"
+dependencies=[
+    "pymongo==4.17.0",
+    "pandas==3.0.3",
+    "fastapi[standard]>=0.141.1",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.scripts]
+my-project = "projet_groupe_mongodb.src.main:main"
+
+[tool.ruff]
+line-length = 100

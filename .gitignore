@@ -1,0 +1,6 @@
+data/
+.env
+presentation/
+.venv
+uv.lock
+__pycache__

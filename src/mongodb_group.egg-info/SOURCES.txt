@@ -1,0 +1,10 @@
+pyproject.toml
+src/__init__.py
+src/logger.py
+src/main.py
+src/mongodb_group.egg-info/PKG-INFO
+src/mongodb_group.egg-info/SOURCES.txt
+src/mongodb_group.egg-info/dependency_links.txt
+src/mongodb_group.egg-info/entry_points.txt
+src/mongodb_group.egg-info/requires.txt
+src/mongodb_group.egg-info/top_level.txt

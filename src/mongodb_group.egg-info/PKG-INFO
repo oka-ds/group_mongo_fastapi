@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mongodb_group
+Version: 0.1.0
+Summary: Store data 'Brazilian E-Commerce Public Dataset by Olist'in mongoDb and allow access with FastAPI
+Requires-Python: ==3.11.2
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo==4.17.0
+Requires-Dist: pandas==3.0.3
+Requires-Dist: fastapi[standard]>=0.141.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"

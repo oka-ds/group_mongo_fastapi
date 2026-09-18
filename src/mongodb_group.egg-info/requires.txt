@@ -1,0 +1,7 @@
+pymongo==4.17.0
+pandas==3.0.3
+fastapi[standard]>=0.141.1
+
+[dev]
+pytest
+ruff
